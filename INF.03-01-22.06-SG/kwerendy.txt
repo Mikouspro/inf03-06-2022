@@ -1,0 +1,4 @@
+SELECT `id`, `nazwa`, `wystepowanie` FROM `ryby` WHERE `styl_zycia`=1; 
+SELECT `Ryby_id`, `wymiar_ochronny` FROM `okres_ochronny` WHERE `wymiar_ochronny`<30; 
+SELECT `nazwa`, `akwen`, `wojewodztwo` FROM `ryby` JOIN `lowisko` ON `ryby`.`id`=`lowisko`.`Ryby_id` WHERE `lowisko`.`rodzaj`=2; 
+ALTER TABLE `ryby` ADD COLUMN `dobowy_limit` INT(3) CHECK (`dobowy_limit` BETWEEN "0" AND "255"); 
